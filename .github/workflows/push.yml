@@ -1,10 +1,5 @@
-name: ci
-
-on:
-  push:
-    branches:
-      - "master"
-
+on: push
+name: deploy
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -45,4 +40,4 @@ jobs:
       - name: Move cache
         run: |
           rm -rf /tmp/.buildx-cache
-          mv /tmp/.buildx-cache-new /tmp/.buildx-cache 
+          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
