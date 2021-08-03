@@ -65,12 +65,10 @@ RUN pip install -r /requirements.txt --no-cache-dir
 
 RUN mkdir documentos
 WORKDIR /documentos
-ADD requeriments.txt /documentos/
 ADD . /documentos/
 
 RUN mkdir app
 WORKDIR /app
-ADD requeriments.txt /app/
 ADD . /app/
 
 
