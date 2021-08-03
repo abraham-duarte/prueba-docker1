@@ -64,7 +64,7 @@ RUN mv geckodriver /opt/drivers/geckodriver
 RUN mkdir documentos 
 COPY /requeriments.txt/documentos/ $DEST
 
-COPY app/requirements.txt requirements.txt
+
 RUN pip3 install -r requirements.txt
 
 
