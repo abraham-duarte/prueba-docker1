@@ -62,14 +62,11 @@ RUN tar -xvzf geckodriver-v0.26.0-linux64.tar.gz
 RUN mkdir -p /opt/drivers
 RUN mv geckodriver /opt/drivers/geckodriver
 RUN mkdir documentos 
-COPY /documentos/requeriments.txt $DEST
 RUN pip install -r /requirements.txt
 
 
 RUN mkdir /app
 WORKDIR /app
-COPY /app/requeriments.txt $DEST
-
 
 # Set working directory to function root directory
 
