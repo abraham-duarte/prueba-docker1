@@ -63,7 +63,6 @@ RUN mkdir -p /opt/drivers
 RUN mv geckodriver /opt/drivers/geckodriver
 RUN mkdir documentos 
 COPY ./requeriments.txt/documentos $DEST
-COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
 
