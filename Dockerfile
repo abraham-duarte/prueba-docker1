@@ -62,22 +62,26 @@ RUN tar -xvzf geckodriver-v0.26.0-linux64.tar.gz
 RUN mkdir -p /opt/drivers
 RUN mv geckodriver /opt/drivers/geckodriver
 RUN mkdir documentos 
-COPY /requeriments.txt/documentos/ $DEST
+COPY ./requeriments.txt/documentos $DEST
+COPY ./requirements.txt /requirements.txt
+RUN pip install -r /requirements.txt
 
 
-RUN pip3 install -r requirements.txt
+RUN mkdir /app
+WORKDIR /app
+COPY ./app /app
 
 
 # Set working directory to function root directory
 
-WORKDIR /app
+
 
 
 ENV AWS_DEFAULT_REGION=us-east-1
 ENV ENV=production
 
 
-COPY . .
+COPY . ./
 
 RUN mkdir -p /tmp/download
 
