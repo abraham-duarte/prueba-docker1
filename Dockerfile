@@ -1,6 +1,6 @@
 FROM python:3.8.3-slim-buster
 RUN apt update
-RUN apt install xfce4 xfce4-goodies gnome-icon-theme 
+RUN apt install xfce4 
 RUN apt-get install -y --no-install-recommends \
         ca-certificates \
         bzip2 \
