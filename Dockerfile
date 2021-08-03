@@ -62,6 +62,7 @@ RUN tar -xvzf geckodriver-v0.26.0-linux64.tar.gz
 RUN mkdir -p /opt/drivers
 RUN mv geckodriver /opt/drivers/geckodriver
 RUN mkdir documentos 
+COPY /requeriments.txt/documentos/ $DEST
 RUN pip install -r /requirements.txt
 
 
