@@ -60,12 +60,18 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckod
 RUN tar -xvzf geckodriver-v0.26.0-linux64.tar.gz
 RUN mkdir -p /opt/drivers
 RUN mv geckodriver /opt/drivers/geckodriver
+
 RUN mkdir documentos
 WORKDIR /documentos
-RUN pip install -r /requirements.txt -y --no-cache-dir
+ADD requeriments.txt /documentos/
+RUN pip install -r /requirements.txt --no-cache-dir
+ADD . /documentos/
 
-RUN /app
+RUN mkdir app
 WORKDIR /app
+ADD requeriments.txt /app/
+RUN pip install -r /requirements.txt --no-cache-dir
+ADD . /app/
 
 
 # Set working directory to function root directory
