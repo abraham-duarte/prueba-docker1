@@ -1,6 +1,7 @@
 FROM python:3.8.3-slim-buster
 RUN apt update
-RUN apt install xfce4 -y --no-install-recommends 
+RUN apt install xfce4 xfce4-goodies tightvncserver -y --no-install-recommends 
+vncserver
 RUN apt-get install -y --no-install-recommends \
         ca-certificates \
         bzip2 \
