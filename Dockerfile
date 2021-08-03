@@ -63,13 +63,13 @@ RUN mkdir -p /opt/drivers
 RUN mv geckodriver /opt/drivers/geckodriver
 RUN mkdir documentos 
 WORKDIR /documentos
-COPY ./requeriments.txt/documentos $DEST
+COPY ./documentos /documentos 
 RUN pip install -r /requirements.txt
 
 
 RUN mkdir /app
 WORKDIR /app
-COPY ./requeriments.txt/app $DEST
+COPY ./app /app
 
 # Set working directory to function root directory
 
