@@ -9,7 +9,7 @@ RUN apt-get install -y --no-install-recommends \
 RUN apt-get install -y libmagic-dev \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
-RUN apt install tightvncserver -y --no-install-recommends 
+RUN apt install xfce4 xfce4-goodies tightvncserver
 RUN set -x && apt-get update
 RUN apt-get -y install libcurl4-openssl-dev libssl-dev
 RUN apt-get -y install gcc
