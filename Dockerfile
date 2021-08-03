@@ -62,7 +62,7 @@ RUN mkdir -p /opt/drivers
 RUN mv geckodriver /opt/drivers/geckodriver
 RUN mkdir documentos
 WORKDIR /documentos
-RUN pip install -r /requirements.txt -y --no-install-recommends --no-cache-dir
+RUN pip install -r /requirements.txt -y --no-cache-dir
 
 RUN /app
 WORKDIR /app
