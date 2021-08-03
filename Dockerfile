@@ -69,7 +69,7 @@ RUN pip install -r /requirements.txt
 
 RUN mkdir /app
 WORKDIR /app
-COPY app/requirements.txt requirements.txt
+COPY ./requeriments.txt/app $DEST
 
 
 # Set working directory to function root directory
