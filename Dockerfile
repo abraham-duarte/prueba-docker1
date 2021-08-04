@@ -64,7 +64,6 @@ RUN mv geckodriver /opt/drivers/geckodriver
 RUN pip3 install --no-cache-dir --upgrade pip && \
     pip3 install --no-cache-dir --upgrade setuptools && \
     pip3 install --no-cache-dir --upgrade wheel
-RUN pip3 install --no-cache-dir -y --no-install-recommends 
 RUN pip3 install -r requirements.txt 
 
 RUN mkdir documentos
