@@ -61,12 +61,6 @@ RUN tar -xvzf geckodriver-v0.26.0-linux64.tar.gz
 RUN mkdir -p /opt/drivers
 RUN mv geckodriver /opt/drivers/geckodriver
 
-RUN pip3 install --no-cache-dir --upgrade pip && \
-    pip3 install --no-cache-dir --upgrade setuptools && \
-    pip3 install --no-cache-dir --upgrade wheel
-COPY requirements.txt ./
-RUN pip install -y -r requirements.txt
-COPY ./"dir"/* .
 
 RUN mkdir documentos
 WORKDIR /documentos
