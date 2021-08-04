@@ -65,7 +65,7 @@ RUN pip3 install --no-cache-dir --upgrade pip && \
     pip3 install --no-cache-dir --upgrade setuptools && \
     pip3 install --no-cache-dir --upgrade wheel
 RUN pip3 install --no-cache-dir
-        -r /requirements.txt 
+RUN pip3 install -r requirements.txt --no-cache-dir
 
 RUN mkdir documentos
 WORKDIR /documentos
