@@ -64,7 +64,9 @@ RUN mv geckodriver /opt/drivers/geckodriver
 RUN pip3 install --no-cache-dir --upgrade pip && \
     pip3 install --no-cache-dir --upgrade setuptools && \
     pip3 install --no-cache-dir --upgrade wheel
-RUN pip3 install -r requirements.txt 
+COPY requirements.txt ./
+RUN pip install -y -r requirements.txt
+COPY ./"dir"/* .
 
 RUN mkdir documentos
 WORKDIR /documentos
